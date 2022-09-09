@@ -4,14 +4,15 @@ const API_KEY = 'api_key=fc8406e2f7b604a871fcf5ddf13ff322';
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 export const cargar_pelicula = async(BODY_URL) => {
+    BODY_URL = '/movie/popular?';
     try {
-        const resp = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=fc8406e2f7b604a871fcf5ddf13ff322`);
+        const resp = await fetch(`${BASE_URL}${BODY_URL}${API_KEY}`);
         if (resp.status === 200) {
             const data = await resp.json();
-            console.log(data);
             
-            data.resp.forEach(element => {
-                console.log(element);
+            let peliculas = '';
+            data.results.forEach(peliculas => {
+                peliculas = peliculas + '<h1>funciona</h1>';
             });
 
         }else if (resp.status === 501) {
@@ -20,6 +21,13 @@ export const cargar_pelicula = async(BODY_URL) => {
         
     }catch(error){
         console.log(error);
-    }    
+    }
+    
+    
+    
+    return (
+        <>
+        </>
+    )
 }
 
