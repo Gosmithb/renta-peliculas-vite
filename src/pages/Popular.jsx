@@ -1,7 +1,16 @@
-import {cargar_pelicula} from '../api/MovieApi';
+import { Services } from '../api/MovieApi';
+import { useEffect, useState } from 'react';
 export const Popular = () => {
-  cargar_pelicula('/movie/popular?');
+
+
+  useEffect(() => {
+    Services.cargar_populares('/movie/popular?');
+
+  }, [])
+
   return (
-    <div>Popular</div>
+    <div>
+      Popular
+    </div>
   )
 }
