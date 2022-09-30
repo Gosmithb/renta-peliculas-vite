@@ -21,8 +21,8 @@ const NavBar = () => {
                         Catalogo
                     </Nav.Link>
                     <NavDropdown title='Peliculas' id='basic-nav-dropdown' className='dropdown'>
-                        <NavDropdown.Item as={Link} to='/premieres'>
-                            Estrenos
+                        <NavDropdown.Item as={Link} to='/recommendations'>
+                            Recomendaciones
                         </NavDropdown.Item>
                         <NavDropdown.Item as={Link} to='/popular'>
                             Populares
