@@ -5,7 +5,7 @@ export const Recommendations = (idMovie) => {
 
 
   useEffect(() => {
-    Services.cargar_pelicula(`/movie/${idMovie}/recommendations?`,`recomendaciones` );
+    Services.cargar_pelicula(`/movie/${idMovie}/recommendations?`);
 
   }, [])
   
