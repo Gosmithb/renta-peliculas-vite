@@ -14,9 +14,6 @@ export const Popular = () => {
       const url = 'https://api.themoviedb.org/3/movie/popular?api_key=fc8406e2f7b604a871fcf5ddf13ff322';
       const res = await axios.get(url);
     
-      // res.data.results.forEach(element => {
-      //   console.log(element);
-      // });
       setPeliculas(res.data.results);
     }
     obtenerPeliculas();

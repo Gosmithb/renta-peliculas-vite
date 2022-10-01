@@ -1,5 +1,4 @@
 
-
 const API_KEY = 'api_key=fc8406e2f7b604a871fcf5ddf13ff322';
 const BASE_URL = 'https://api.themoviedb.org/3';
 
@@ -21,8 +20,6 @@ const cargar_pelicula = async (BODY_URL) => {
     } catch (error) {
         console.log(error);
     }
-
-
 
     return (
         <div>
